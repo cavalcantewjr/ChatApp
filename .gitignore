@@ -1,36 +1,35 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# node_modules
 node_modules/
-
-# Expo
-.expo/
-dist/
-web-build/
-expo-env.d.ts
-
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
 
 # macOS
 .DS_Store
-*.pem
 
-# local env files
-.env*.local
+# log de erros
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# typescript
-*.tsbuildinfo
+# arquivos do Expo
+.expo/
+.expo-shared/
+
+# Android
+android/app/build/
+*.keystore
+
+# iOS (caso gere futuramente)
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+
+# Visual Studio Code
+.vscode/
+
+# Logs temporários
+*.log
+
+# pastas ocultas ou locais
+.env
+.env.*
+.idea/
+*.swp
