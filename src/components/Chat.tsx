@@ -8,7 +8,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import styles from './Chat.styles';
+import styles from './styles/Chat.styles';
 
 type Message = {
   id: string;
@@ -46,10 +46,7 @@ export default function Chat() {
     }
   };
 
-  const renderedMessages = message
-    ? [{ id: 'temp', sender: userName, text: message, time: '' }, ...messages]
-    : messages;
-
+  
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -71,7 +68,7 @@ export default function Chat() {
       ) : (
         <View style={styles.chatContainer}>
           <FlatList
-            data={renderedMessages}
+            data={messages}
             inverted
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
